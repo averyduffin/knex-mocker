@@ -2,10 +2,10 @@
   "name": "knex-mocker",
   "version": "1.0.0",
   "description": "Mocks knex for testing purposes. Copies database tables from existing schema into a testing schema and allows the table to be seeded. Setup and teardown happens by making function calls. Currently only tested on mysql. ",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "nodemon src/index.js  --exec babel-node",
-    "build": "babel src -d dist",
+    "build": "node_modules/.bin/babel src -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
