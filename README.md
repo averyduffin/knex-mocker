@@ -6,9 +6,9 @@ Mocks knex for testing purposes. Copies database tables from existing schema int
 
 ```javascript
 import mock from 'knex-mocker';
-import { db, mdb } from './../../src/db';
+import { knexDB } from './db';
 
-mock(db.client.config, (err, knex) => {
+mock(knexDB.client.config, (err, knex) => {
     if (err) throw err;
 	knex.remove((err) => {
 
