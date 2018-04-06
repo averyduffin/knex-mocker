@@ -1,6 +1,6 @@
 {
   "name": "knex-mocker",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Mocks knex for testing purposes. Copies database tables from existing schema into a testing schema and allows the table to be seeded. Setup and teardown happens by making function calls. Currently only tested on mysql. ",
   "main": "dist/index.js",
   "scripts": {
