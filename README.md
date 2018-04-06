@@ -5,11 +5,15 @@ Mocks knex for testing purposes. Copies database tables from existing schema int
 #API
 
 ```javascript
-import { mock } from 'knex-mocker';
+import mock from 'knex-mocker';
 import { db, mdb } from './../../src/db';
 
-mock(db.client.config, (err, knexDB) => {
+mock(db.client.config, (err, knex) => {
     if (err) throw err;
-	knexDB.remove();
+	knex.remove((err) => {
+
+    });
 });
 ```
+
+.remove(callback) - removes mock database, extended from knex.
