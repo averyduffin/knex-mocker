@@ -11,9 +11,9 @@ import { knexDB } from './db';
 mock(knexDB.client.config, (err, knex) => {
     if (err) throw err;
 	knex.remove((err) => {
-
     });
 });
 ```
+
 
 .remove(callback) - removes mock database, extended from knex.
