@@ -9,7 +9,7 @@ const TMP_SQL_FILE = 'tmpdump.sql'
 let mockKnexConfig = null;
 
 // creates a copy of database in a test schema returns the new knex object
-export const mock = (knexConfig, callback) => {
+export default mock = (knexConfig, callback) => {
     mockKnexConfig = JSON.parse(JSON.stringify(knexConfig));
     mockKnexConfig.connection.database = `mock_${knexConfig.connection.database}_${moment.utc()}`;
 
